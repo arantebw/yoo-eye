@@ -1,0 +1,19 @@
+{
+  "name": "yoo-eye",
+  "version": "1.0.0",
+  "description": "My personal UI component library for TypeScript and React projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arantebw/yoo-eye.git"
+  },
+  "author": "Billy Arante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arantebw/yoo-eye/issues"
+  },
+  "homepage": "https://github.com/arantebw/yoo-eye#readme"
+}
