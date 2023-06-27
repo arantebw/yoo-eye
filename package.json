@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/arantebw/yoo-eye/issues"
   },
-  "homepage": "https://github.com/arantebw/yoo-eye#readme"
+  "homepage": "https://github.com/arantebw/yoo-eye#readme",
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "react": "^18.2.0",
+    "typescript": "^5.1.3"
+  }
 }
