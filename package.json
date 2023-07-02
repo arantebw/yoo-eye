@@ -2,9 +2,11 @@
   "name": "yoo-eye",
   "version": "1.0.0",
   "description": "My personal UI component library for TypeScript and React projects.",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c --bundleConfigAsCjs"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,16 @@
   },
   "homepage": "https://github.com/arantebw/yoo-eye#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.2",
     "@types/react": "^18.2.14",
     "@types/styled-components": "^5.1.26",
     "react": "^18.2.0",
+    "rollup": "3.0.0",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "styled-components": "^6.0.1",
     "typescript": "^5.1.3"
   }
