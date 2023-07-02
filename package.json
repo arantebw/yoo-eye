@@ -18,7 +18,9 @@
   "homepage": "https://github.com/arantebw/yoo-eye#readme",
   "devDependencies": {
     "@types/react": "^18.2.14",
+    "@types/styled-components": "^5.1.26",
     "react": "^18.2.0",
+    "styled-components": "^6.0.1",
     "typescript": "^5.1.3"
   }
 }
