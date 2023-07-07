@@ -42,6 +42,10 @@ const S = {
   `,
   SoftButton: styled(BaseButton)`
     background-color: rgba(25, 118, 210, 0.08);
+
+    &:hover {
+      background-color: rgba(25, 118, 210, 0.16);
+    }
   `,
   GhostButton: styled(BaseButton)`
     background-color: transparent;
