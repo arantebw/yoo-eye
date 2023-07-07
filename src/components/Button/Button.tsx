@@ -27,13 +27,13 @@ const BaseButton = styled.button<ButtonProps>`
   tabindex: 0;
   color: rgba(25, 118, 210);
   border: 0px;
+  transition: background-color 250ms;
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 `;
 
 const S = {
   TransparentButton: styled(BaseButton)`
     background-color: transparent;
-    transition: background-color 250ms;
 
     &:hover {
       text-decoration: none;
@@ -46,7 +46,6 @@ const S = {
   GhostButton: styled(BaseButton)`
     background-color: transparent;
     border: 1px solid rgb(25, 118, 210);
-    transition: background-color 250ms;
 
     &:hover {
       background-color: rgba(25, 118, 210, 0.08);
@@ -55,6 +54,10 @@ const S = {
   SolidButton: styled(BaseButton)`
     background-color: rgb(25, 118, 210);
     color: rgb(255, 255, 255);
+
+    &:hover {
+      background-color: rgb(21, 101, 192);
+    }
   `,
 };
 
