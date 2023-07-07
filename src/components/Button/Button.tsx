@@ -10,32 +10,40 @@ const S = {
     position: relative;
     box-sizing: border-box;
     outline: 0px;
-    border: 0px;
     font-size: 0.8rem;
     line-height: 1.75;
     cursor: pointer;
     border-radius: 4px;
-    background-color: #4964e9;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    width: fit-content;
     padding: 6px 16px;
     user-select: none;
     appearance: none;
     font-weight: normal;
     font-family: Helvetica, Arial, sans-serif;
-    color: #ffffff;
     letter-spacing: 1px;
     text-transform: uppercase;
+    min-width: 64px;
+    tabindex: 0;
     opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
+    color: ${({ variant }) => (variant === "solid" ? "#fff" : "#4964e9")};
+    background-color: ${({ variant }) =>
+      variant === "solid"
+        ? "#4964e9"
+        : variant === "soft"
+        ? "#f4f6fe"
+        : "transparent"};
+    border: ${({ variant }) =>
+      variant === "ghost" ? "1px solid #4964e9" : "0px"};
   `,
 };
 
-const Button: React.FC<ButtonProps> = ({ text, disabled }) => {
+const Button: React.FC<ButtonProps> = ({ text, disabled, variant }) => {
   return (
     <S.Button
       disabled={disabled}
+      variant={variant}
       type="button"
     >
       {text}
