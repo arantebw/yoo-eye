@@ -46,6 +46,11 @@ const S = {
   GhostButton: styled(BaseButton)`
     background-color: transparent;
     border: 1px solid rgb(25, 118, 210);
+    transition: background-color 250ms;
+
+    &:hover {
+      background-color: rgba(25, 118, 210, 0.08);
+    }
   `,
   SolidButton: styled(BaseButton)`
     background-color: rgb(25, 118, 210);
