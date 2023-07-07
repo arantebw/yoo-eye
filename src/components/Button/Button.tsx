@@ -25,7 +25,7 @@ const BaseButton = styled.button<ButtonProps>`
   text-transform: uppercase;
   min-width: 64px;
   tabindex: 0;
-  color: #4964e9;
+  color: rgba(25, 118, 210);
   border: 0px;
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 `;
@@ -33,17 +33,23 @@ const BaseButton = styled.button<ButtonProps>`
 const S = {
   TransparentButton: styled(BaseButton)`
     background-color: transparent;
+    transition: background-color 250ms;
+
+    &:hover {
+      text-decoration: none;
+      background-color: rgba(25, 118, 210, 0.08);
+    }
   `,
   SoftButton: styled(BaseButton)`
-    background-color: #f4f6fe;
+    background-color: rgba(25, 118, 210, 0.08);
   `,
   GhostButton: styled(BaseButton)`
     background-color: transparent;
-    border: 1px solid #4964e9;
+    border: 1px solid rgb(25, 118, 210);
   `,
   SolidButton: styled(BaseButton)`
-    background-color: #4964e9;
-    color: #fff;
+    background-color: rgb(25, 118, 210);
+    color: rgb(255, 255, 255);
   `,
 };
 
