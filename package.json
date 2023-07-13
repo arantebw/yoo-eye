@@ -1,6 +1,9 @@
 {
   "name": "@arantebw/yoo-eye",
   "version": "0.1.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/arantebw"
+  },
   "description": "My personal UI component library for React.js and TypeScript projects.",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
