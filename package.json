@@ -1,6 +1,9 @@
 {
-  "name": "yoo-eye",
-  "version": "1.0.0",
+  "name": "@arantebw/yoo-eye",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/arantebw"
+  },
+  "version": "1.2.0",
   "description": "My personal UI component library for TypeScript and React projects.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
