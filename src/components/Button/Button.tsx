@@ -65,7 +65,7 @@ const S = {
   `,
 };
 
-const Button: React.FC<ButtonProps> = ({ text, disabled, variant }) => {
+const Button = ({ text, disabled, variant }: ButtonProps) => {
   switch (variant) {
     case "transparent":
       return (
