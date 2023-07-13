@@ -1,15 +1,15 @@
 {
   "name": "@arantebw/yoo-eye",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/arantebw"
+    "registry": "https://npm.pkg.github.com/arantebw"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "My personal UI component library for TypeScript and React projects.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
+    "rollup": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "jest"
@@ -32,10 +32,12 @@
     "@storybook/addon-essentials": "^7.0.25",
     "@storybook/addon-interactions": "^7.0.25",
     "@storybook/addon-links": "^7.0.25",
+    "@storybook/addons": "^7.0.26",
     "@storybook/blocks": "^7.0.25",
     "@storybook/react": "^7.0.25",
     "@storybook/react-vite": "^7.0.25",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/theming": "^7.0.26",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
@@ -55,11 +57,11 @@
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   },
-  "dependencies": {
-    "@storybook/addons": "^7.0.26",
-    "@storybook/theming": "^7.0.26"
-  },
   "peerDependencies": {
     "react": "^18.2.0"
-  }
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module"
 }
