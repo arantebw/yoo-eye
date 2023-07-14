@@ -25,6 +25,7 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
+    external: ["react", "react-dom", "styled-components"],
   },
   {
     input: "dist/esm/types/index.d.ts",
