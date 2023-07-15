@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "My personal UI component library for React.js and TypeScript projects.",
   "scripts": {
-    "rollup": "rollup -c --bundleConfigAsCjs"
+    "rollup": "rollup -c --bundleConfigAsCjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -19,9 +21,19 @@
     "@rollup/plugin-commonjs": "^25.0.2",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-typescript": "^11.1.2",
+    "@storybook/addon-essentials": "^7.0.27",
+    "@storybook/addon-interactions": "^7.0.27",
+    "@storybook/addon-links": "^7.0.27",
+    "@storybook/blocks": "^7.0.27",
+    "@storybook/react": "^7.0.27",
+    "@storybook/react-vite": "^7.0.27",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.2.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^3.26.2",
     "rollup-plugin-dts": "^5.3.0",
+    "storybook": "^7.0.27",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   },
@@ -32,11 +44,7 @@
   ],
   "types": "dist/index.d.ts",
   "dependencies": {
-    "styled-components": "^6.0.4",
-    "prop-types": "^15.8.1"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "prop-types": "^15.8.1",
+    "styled-components": "^6.0.4"
   }
 }
