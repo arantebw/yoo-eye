@@ -5,6 +5,6 @@ export default create({
   brandTitle: "Yoo-Eye Components",
   brandUrl: "https://www.npmjs.com/package/@arantebw/yoo-eye",
   brandImage:
-    "https://res.cloudinary.com/dsmhiu5fj/image/upload/f_auto,q_auto/gi2e4mtwhqxqollxgm0h",
+    "https://res.cloudinary.com/dsmhiu5fj/image/upload/v1689685782/yoo_eye_logo_ktzbnm.png",
   brandTarget: "_self",
 });
