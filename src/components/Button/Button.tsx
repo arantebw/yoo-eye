@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import styled from "styled-components";
 import { ButtonProps } from "./Button.types";
 
@@ -24,7 +24,6 @@ const BaseButton = styled.button<ButtonProps>`
   letter-spacing: 1px;
   text-transform: uppercase;
   min-width: 64px;
-  tabindex: 0;
   color: rgba(25, 118, 210);
   border: 0px;
   transition: background-color 250ms;
@@ -65,56 +64,56 @@ const S = {
   `,
 };
 
-const Button: React.FC<ButtonProps> = ({ text, disabled, variant }) => {
+const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
   switch (variant) {
     case "transparent":
       return (
         <S.TransparentButton
-          disabled={disabled}
           variant={variant}
           type="button"
+          tabIndex={0}
         >
-          {text}
+          {children}
         </S.TransparentButton>
       );
     case "soft":
       return (
         <S.SoftButton
-          disabled={disabled}
           variant={variant}
           type="button"
+          tabIndex={0}
         >
-          {text}
+          {children}
         </S.SoftButton>
       );
     case "ghost":
       return (
         <S.GhostButton
-          disabled={disabled}
           variant={variant}
           type="button"
+          tabIndex={0}
         >
-          {text}
+          {children}
         </S.GhostButton>
       );
     case "solid":
       return (
         <S.SolidButton
-          disabled={disabled}
           variant={variant}
           type="button"
+          tabIndex={0}
         >
-          {text}
+          {children}
         </S.SolidButton>
       );
     default:
       return (
         <BaseButton
-          disabled={disabled}
           variant={variant}
           type="button"
+          tabIndex={0}
         >
-          {text}
+          {children}
         </BaseButton>
       );
   }
