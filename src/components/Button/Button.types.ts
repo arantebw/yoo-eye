@@ -1,7 +1,7 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler } from 'react';
 
 export interface ButtonProps {
-  variant?: "solid" | "ghost" | "soft" | "transparent";
-  size?: "small" | "medium" | "large";
+  variant?: 'solid' | 'ghost' | 'soft' | 'transparent';
+  size?: 'small' | 'medium' | 'large';
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }

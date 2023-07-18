@@ -1,6 +1,6 @@
-import React, { PropsWithChildren } from "react";
-import styled from "styled-components";
-import { ButtonProps } from "./Button.types";
+import React, { PropsWithChildren } from 'react';
+import styled from 'styled-components';
+import { ButtonProps } from './Button.types';
 
 const BaseButton = styled.button<ButtonProps>`
   display: inline-flex;
@@ -66,7 +66,7 @@ const S = {
 
 const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
   switch (variant) {
-    case "transparent":
+    case 'transparent':
       return (
         <S.TransparentButton
           variant={variant}
@@ -76,7 +76,7 @@ const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
           {children}
         </S.TransparentButton>
       );
-    case "soft":
+    case 'soft':
       return (
         <S.SoftButton
           variant={variant}
@@ -86,7 +86,7 @@ const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
           {children}
         </S.SoftButton>
       );
-    case "ghost":
+    case 'ghost':
       return (
         <S.GhostButton
           variant={variant}
@@ -96,7 +96,7 @@ const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
           {children}
         </S.GhostButton>
       );
-    case "solid":
+    case 'solid':
       return (
         <S.SolidButton
           variant={variant}
