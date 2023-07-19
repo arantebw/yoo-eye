@@ -67,7 +67,7 @@ const S = {
 const Button = ({
   children,
   type = 'button',
-  variant,
+  variant = 'soft',
 }: PropsWithChildren<ButtonProps>) => {
   switch (variant) {
     case 'transparent':
