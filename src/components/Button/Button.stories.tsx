@@ -13,14 +13,15 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const SolidButton: Story = (args: ButtonProps) => (
-  <Button variant="solid">Solid</Button>
+  <Button {...args}>Solid</Button>
 );
 SolidButton.args = {
   variant: 'solid',
+  type: 'submit',
 };
 
 export const GhostButton: Story = (args: ButtonProps) => (
-  <Button variant="ghost">Ghost</Button>
+  <Button {...args}>Ghost</Button>
 );
 GhostButton.args = {
   variant: 'ghost',

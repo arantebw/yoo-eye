@@ -64,13 +64,17 @@ const S = {
   `,
 };
 
-const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
+const Button = ({
+  children,
+  type = 'button',
+  variant,
+}: PropsWithChildren<ButtonProps>) => {
   switch (variant) {
     case 'transparent':
       return (
         <S.TransparentButton
           variant={variant}
-          type="button"
+          type={type}
           tabIndex={0}
         >
           {children}
@@ -80,7 +84,7 @@ const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
       return (
         <S.SoftButton
           variant={variant}
-          type="button"
+          type={type}
           tabIndex={0}
         >
           {children}
@@ -90,7 +94,7 @@ const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
       return (
         <S.GhostButton
           variant={variant}
-          type="button"
+          type={type}
           tabIndex={0}
         >
           {children}
@@ -100,7 +104,7 @@ const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
       return (
         <S.SolidButton
           variant={variant}
-          type="button"
+          type={type}
           tabIndex={0}
         >
           {children}
@@ -110,7 +114,7 @@ const Button = ({ children, variant }: PropsWithChildren<ButtonProps>) => {
       return (
         <BaseButton
           variant={variant}
-          type="button"
+          type={type}
           tabIndex={0}
         >
           {children}
