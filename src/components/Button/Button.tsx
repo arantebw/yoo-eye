@@ -2,6 +2,17 @@ import React, { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import { ButtonProps } from './Button.types';
 
+const getFontSize = (size: string) => {
+  switch (size) {
+    case 'small':
+      return '0.8125rem';
+    case 'large':
+      return '0.9375rem';
+    default:
+      return '0.875rem';
+  }
+};
+
 const getPaddings = (size: string) => {
   switch (size) {
     case 'small':
@@ -45,6 +56,7 @@ const S = {
   TransparentButton: styled(BaseButton)`
     background-color: transparent;
     padding: ${({ size }) => getPaddings(size as string)};
+    font-size: ${({ size }) => getFontSize(size as string)};
 
     &:hover {
       text-decoration: none;
@@ -54,6 +66,7 @@ const S = {
   SoftButton: styled(BaseButton)`
     background-color: rgba(25, 118, 210, 0.08);
     padding: ${({ size }) => getPaddings(size as string)};
+    font-size: ${({ size }) => getFontSize(size as string)};
 
     &:hover {
       background-color: rgba(25, 118, 210, 0.16);
@@ -63,6 +76,7 @@ const S = {
     background-color: transparent;
     border: 1px solid rgb(25, 118, 210);
     padding: ${({ size }) => getPaddings(size as string)};
+    font-size: ${({ size }) => getFontSize(size as string)};
 
     &:hover {
       background-color: rgba(25, 118, 210, 0.08);
@@ -72,6 +86,7 @@ const S = {
     background-color: rgb(25, 118, 210);
     color: rgb(255, 255, 255);
     padding: ${({ size }) => getPaddings(size as string)};
+    font-size: ${({ size }) => getFontSize(size as string)};
 
     &:hover {
       background-color: rgb(21, 101, 192);
