@@ -18,6 +18,7 @@ export const SolidButton: Story = (args: ButtonProps) => (
 SolidButton.args = {
   variant: 'solid',
   type: 'submit',
+  onClick: () => console.log('solid button is clicked'),
 };
 
 export const GhostButton: Story = (args: ButtonProps) => (
@@ -25,6 +26,8 @@ export const GhostButton: Story = (args: ButtonProps) => (
 );
 GhostButton.args = {
   variant: 'ghost',
+  type: 'reset',
+  onClick: () => console.log('ghost button is clicked'),
 };
 
 export const SoftButton: Story = (args: ButtonProps) => (
@@ -32,6 +35,7 @@ export const SoftButton: Story = (args: ButtonProps) => (
 );
 SoftButton.args = {
   variant: 'soft',
+  onClick: () => console.log('soft button is clicked'),
 };
 
 export const TransparentButton: Story = (args: ButtonProps) => (
@@ -39,4 +43,5 @@ export const TransparentButton: Story = (args: ButtonProps) => (
 );
 TransparentButton.args = {
   variant: 'transparent',
+  onClick: () => console.log('transparent button is clicked'),
 };

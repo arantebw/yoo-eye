@@ -96,6 +96,7 @@ const S = {
 
 const Button = ({
   children,
+  onClick,
   size = 'medium',
   type = 'button',
   variant = 'soft',
@@ -104,6 +105,7 @@ const Button = ({
     case 'transparent':
       return (
         <S.TransparentButton
+          onClick={onClick}
           size={size}
           type={type}
           tabIndex={0}
@@ -115,6 +117,7 @@ const Button = ({
     case 'soft':
       return (
         <S.SoftButton
+          onClick={onClick}
           size={size}
           type={type}
           tabIndex={0}
@@ -126,6 +129,7 @@ const Button = ({
     case 'ghost':
       return (
         <S.GhostButton
+          onClick={onClick}
           size={size}
           type={type}
           tabIndex={0}
@@ -137,6 +141,7 @@ const Button = ({
     case 'solid':
       return (
         <S.SolidButton
+          onClick={onClick}
           size={size}
           type={type}
           tabIndex={0}
@@ -148,6 +153,7 @@ const Button = ({
     default:
       return (
         <BaseButton
+          onClick={onClick}
           size={size}
           type={type}
           tabIndex={0}
