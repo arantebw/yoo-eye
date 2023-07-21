@@ -25,6 +25,7 @@ const getPaddings = (size: string) => {
 };
 
 const BaseButton = styled.button<ButtonProps>`
+  appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +41,6 @@ const BaseButton = styled.button<ButtonProps>`
   text-align: center;
   padding: ${({ size }) => getPaddings(size as string)};
   user-select: none;
-  appearance: none;
   font-weight: normal;
   font-family: Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
