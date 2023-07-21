@@ -2,6 +2,17 @@ import React, { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import { ButtonProps } from './Button.types';
 
+const getPaddings = (size: string) => {
+  switch (size) {
+    case 'small':
+      return '3px 9px';
+    case 'large':
+      return '7px 21px';
+    default:
+      return '5px 15px';
+  }
+};
+
 const BaseButton = styled.button<ButtonProps>`
   display: inline-flex;
   align-items: center;
@@ -16,7 +27,7 @@ const BaseButton = styled.button<ButtonProps>`
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  padding: 6px 16px;
+  padding: ${({ size }) => getPaddings(size as string)};
   user-select: none;
   appearance: none;
   font-weight: normal;
@@ -33,6 +44,7 @@ const BaseButton = styled.button<ButtonProps>`
 const S = {
   TransparentButton: styled(BaseButton)`
     background-color: transparent;
+    padding: ${({ size }) => getPaddings(size as string)};
 
     &:hover {
       text-decoration: none;
@@ -41,6 +53,7 @@ const S = {
   `,
   SoftButton: styled(BaseButton)`
     background-color: rgba(25, 118, 210, 0.08);
+    padding: ${({ size }) => getPaddings(size as string)};
 
     &:hover {
       background-color: rgba(25, 118, 210, 0.16);
@@ -49,6 +62,7 @@ const S = {
   GhostButton: styled(BaseButton)`
     background-color: transparent;
     border: 1px solid rgb(25, 118, 210);
+    padding: ${({ size }) => getPaddings(size as string)};
 
     &:hover {
       background-color: rgba(25, 118, 210, 0.08);
@@ -57,6 +71,7 @@ const S = {
   SolidButton: styled(BaseButton)`
     background-color: rgb(25, 118, 210);
     color: rgb(255, 255, 255);
+    padding: ${({ size }) => getPaddings(size as string)};
 
     &:hover {
       background-color: rgb(21, 101, 192);
@@ -66,6 +81,7 @@ const S = {
 
 const Button = ({
   children,
+  size = 'medium',
   type = 'button',
   variant = 'soft',
 }: PropsWithChildren<ButtonProps>) => {
@@ -73,9 +89,10 @@ const Button = ({
     case 'transparent':
       return (
         <S.TransparentButton
-          variant={variant}
+          size={size}
           type={type}
           tabIndex={0}
+          variant={variant}
         >
           {children}
         </S.TransparentButton>
@@ -83,9 +100,10 @@ const Button = ({
     case 'soft':
       return (
         <S.SoftButton
-          variant={variant}
+          size={size}
           type={type}
           tabIndex={0}
+          variant={variant}
         >
           {children}
         </S.SoftButton>
@@ -93,9 +111,10 @@ const Button = ({
     case 'ghost':
       return (
         <S.GhostButton
-          variant={variant}
+          size={size}
           type={type}
           tabIndex={0}
+          variant={variant}
         >
           {children}
         </S.GhostButton>
@@ -103,9 +122,10 @@ const Button = ({
     case 'solid':
       return (
         <S.SolidButton
-          variant={variant}
+          size={size}
           type={type}
           tabIndex={0}
+          variant={variant}
         >
           {children}
         </S.SolidButton>
@@ -113,9 +133,10 @@ const Button = ({
     default:
       return (
         <BaseButton
-          variant={variant}
+          size={size}
           type={type}
           tabIndex={0}
+          variant={variant}
         >
           {children}
         </BaseButton>
