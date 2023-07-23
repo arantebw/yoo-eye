@@ -1,11 +1,17 @@
 # yoo-eye
 
+My personal UI component library made for TypeScript and React projects.
+
 ## Contents
 
+- Requirements
 - Development
+  - Install the dependencies
   - Run the local Storybook server
 
-My personal UI component library made for TypeScript and React projects.
+## Requirements
+
+- Make sure >= Node 18 is installed.
 
 ## Development
 
