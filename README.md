@@ -9,6 +9,12 @@ My personal UI component library made for TypeScript and React projects.
 
 ## Development
 
+### Install the dependencies
+
+```bash
+npm install
+```
+
 ### Run the local Storybook server
 
 ```bash
