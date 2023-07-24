@@ -1,1 +1,3 @@
-export interface ButtonLinkProps {}
+export interface ButtonLinkProps {
+  href?: string;
+}

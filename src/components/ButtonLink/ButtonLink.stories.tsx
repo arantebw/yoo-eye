@@ -16,4 +16,6 @@ type Story = StoryObj<typeof ButtonLink>;
 export const SolidButtonLink: Story = (args: ButtonLinkProps) => (
   <ButtonLink {...args}>Solid</ButtonLink>
 );
-SolidButtonLink.args = {};
+SolidButtonLink.args = {
+  href: 'https://goodfrontend.dev',
+};
