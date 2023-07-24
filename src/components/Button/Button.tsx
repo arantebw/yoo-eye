@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import { ButtonProps } from './Button.types';
+import { BaseStyles } from '../../styles';
 
 const getFontSize = (size: string) => {
   switch (size) {
@@ -25,27 +26,8 @@ const getPaddings = (size: string) => {
 };
 
 const BaseButton = styled.button<ButtonProps>`
-  appearance: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
-  outline: 0px;
-  font-size: 0.8rem;
-  line-height: 1.75;
-  cursor: pointer;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
+  ${BaseStyles}
   padding: ${({ size }) => getPaddings(size as string)};
-  user-select: none;
-  font-weight: normal;
-  font-family: Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  min-width: 64px;
   color: rgba(25, 118, 210);
   border: 0px;
   transition: background-color 250ms;
