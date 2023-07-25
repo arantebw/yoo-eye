@@ -2,28 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import { ButtonProps } from './Button.types';
 import { BaseStyles } from '../../styles';
-
-const getFontSize = (size: string) => {
-  switch (size) {
-    case 'small':
-      return '0.8125rem';
-    case 'large':
-      return '0.9375rem';
-    default:
-      return '0.875rem';
-  }
-};
-
-const getPaddings = (size: string) => {
-  switch (size) {
-    case 'small':
-      return '3px 9px';
-    case 'large':
-      return '7px 21px';
-    default:
-      return '5px 15px';
-  }
-};
+import { getFontSize, getPaddings } from '../../helpers';
 
 const BaseButton = styled.button<ButtonProps>`
   ${BaseStyles}
@@ -31,7 +10,6 @@ const BaseButton = styled.button<ButtonProps>`
   color: rgba(25, 118, 210);
   border: 0px;
   transition: background-color 250ms;
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 `;
 
 const S = {
