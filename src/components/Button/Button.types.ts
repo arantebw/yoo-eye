@@ -1,8 +1,7 @@
 import { MouseEventHandler } from 'react';
+import { CustomButtonProps } from '../../types';
 
-export interface ButtonProps {
+export interface ButtonProps extends CustomButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
-  size?: 'small' | 'medium' | 'large';
   type?: 'button' | 'reset' | 'submit';
-  variant?: 'solid' | 'ghost' | 'soft' | 'transparent';
 }
