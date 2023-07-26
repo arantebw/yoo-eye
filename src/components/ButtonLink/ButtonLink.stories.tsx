@@ -14,7 +14,7 @@ export default meta;
 type Story = StoryObj<typeof ButtonLink>;
 
 export const SolidButtonLink: Story = (args: ButtonLinkProps) => (
-  <ButtonLink {...args}>Solid</ButtonLink>
+  <ButtonLink {...args}>goodfrontend.dev</ButtonLink>
 );
 SolidButtonLink.args = {
   href: 'https://goodfrontend.dev',
@@ -22,7 +22,7 @@ SolidButtonLink.args = {
 };
 
 export const GhostButtonLink: Story = (args: ButtonLinkProps) => (
-  <ButtonLink {...args}>Ghost</ButtonLink>
+  <ButtonLink {...args}>B.A. Techblogs</ButtonLink>
 );
 GhostButtonLink.args = {
   href: 'https://techblogs.gatsbyjs.io',
@@ -30,7 +30,7 @@ GhostButtonLink.args = {
 };
 
 export const SoftButtonLink: Story = (args: ButtonLinkProps) => (
-  <ButtonLink {...args}>Soft</ButtonLink>
+  <ButtonLink {...args}>LinkedIn</ButtonLink>
 );
 SoftButtonLink.args = {
   href: 'https://www.linkedin.com/in/arantebw',
@@ -38,7 +38,7 @@ SoftButtonLink.args = {
 };
 
 export const TransparentButtonLink: Story = (args: ButtonLinkProps) => (
-  <ButtonLink {...args}>Tranparent</ButtonLink>
+  <ButtonLink {...args}>freeCodeCamp</ButtonLink>
 );
 TransparentButtonLink.args = {
   href: 'https://www.freecodecamp.org/arantebw',
