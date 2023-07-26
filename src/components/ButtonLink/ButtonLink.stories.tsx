@@ -28,3 +28,11 @@ GhostButtonLink.args = {
   href: 'https://techblogs.gatsbyjs.io',
   variant: 'ghost',
 };
+
+export const SoftButtonLink: Story = (args: ButtonLinkProps) => (
+  <ButtonLink {...args}>Soft</ButtonLink>
+);
+SoftButtonLink.args = {
+  href: 'https://www.linkedin.com/in/arantebw',
+  variant: 'soft',
+};
