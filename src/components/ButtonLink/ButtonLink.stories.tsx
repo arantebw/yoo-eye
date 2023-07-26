@@ -18,6 +18,7 @@ export const SolidButtonLink: Story = (args: ButtonLinkProps) => (
 );
 SolidButtonLink.args = {
   href: 'https://goodfrontend.dev',
+  variant: 'solid',
 };
 
 export const GhostButtonLink: Story = (args: ButtonLinkProps) => (
@@ -25,4 +26,5 @@ export const GhostButtonLink: Story = (args: ButtonLinkProps) => (
 );
 GhostButtonLink.args = {
   href: 'https://techblogs.gatsbyjs.io',
+  variant: 'ghost',
 };
