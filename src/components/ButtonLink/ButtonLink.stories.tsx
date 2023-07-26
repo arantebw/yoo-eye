@@ -36,3 +36,11 @@ SoftButtonLink.args = {
   href: 'https://www.linkedin.com/in/arantebw',
   variant: 'soft',
 };
+
+export const TransparentButtonLink: Story = (args: ButtonLinkProps) => (
+  <ButtonLink {...args}>Tranparent</ButtonLink>
+);
+TransparentButtonLink.args = {
+  href: 'https://www.freecodecamp.org/arantebw',
+  variant: 'transparent',
+};
