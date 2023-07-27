@@ -19,6 +19,7 @@ export const SolidButtonLink: Story = (args: ButtonLinkProps) => (
 SolidButtonLink.args = {
   href: 'https://goodfrontend.dev',
   variant: 'solid',
+  target: '_blank',
 };
 
 export const GhostButtonLink: Story = (args: ButtonLinkProps) => (

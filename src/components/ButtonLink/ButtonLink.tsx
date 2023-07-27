@@ -58,6 +58,7 @@ const ButtonLink = ({
   children,
   href,
   size = 'medium',
+  target,
   variant = 'soft',
 }: PropsWithChildren<ButtonLinkProps>) => {
   switch (variant) {
@@ -67,6 +68,7 @@ const ButtonLink = ({
           href={href}
           size={size}
           tabIndex={0}
+          target={target}
           variant={variant}
         >
           {children}
@@ -78,6 +80,7 @@ const ButtonLink = ({
           href={href}
           size={size}
           tabIndex={0}
+          target={target}
           variant={variant}
         >
           {children}
@@ -89,6 +92,7 @@ const ButtonLink = ({
           href={href}
           size={size}
           tabIndex={0}
+          target={target}
           variant={variant}
         >
           {children}
@@ -100,6 +104,7 @@ const ButtonLink = ({
           href={href}
           size={size}
           tabIndex={0}
+          target={target}
           variant={variant}
         >
           {children}
@@ -111,6 +116,7 @@ const ButtonLink = ({
           href={href}
           size={size}
           tabIndex={0}
+          target={target}
           variant={variant}
         >
           {children}
